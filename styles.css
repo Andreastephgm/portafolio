@@ -7,13 +7,16 @@
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
+  background:url('https://i.gifer.com/3HeZ.gif') no-repeat center center fixed;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family:'Orbitron', sans-serif;
+  color: #f0faff;
 }
 
 a {
@@ -22,16 +25,88 @@ a {
 }
 
 header {
-  background-color: #f5e1d7;
   padding: 50px 0;
   text-align: center;
+  color: #f0faff;
 }
 
 .header-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Orbitron', monospace;
 }
+
+.header-container i {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.header-container {
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Orbitron', monospace;
+}
+
+.header-container i {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.custom-tag {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.custom-tag {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.icon-logo {
+  font-size: 2.5rem;
+  color: #00ff00; /* verde Matrix */
+  animation: fadeInMove 1.5s ease-in-out forwards;
+  opacity: 0;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+.animated-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  color:#ffffff;
+  animation: fadeInGlow 2s ease-in-out forwards;
+  opacity: 0;
+  display: inline-block;
+  margin-left: 10px;
+  text-shadow:
+  0 0 5px #00ff00,
+  0 0 15px #00ff00;
+}
+
+@keyframes fadeInMove {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInGlow {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+  }
+}
+
 
 .profile-img {
   width: 120px;
@@ -44,37 +119,48 @@ header {
   text-align: left;
 }
 
-#nombre {
-  font-size: 2.5rem;
-  color: #333;
+.custom-tag {
+  font-family: 'Courier New', monospace;
+  font-size: 2em;
+  color: #4CAF50;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.custom-tag {
+  font-family: 'Orbitron', monospace;
+  font-size: 2em;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+.custom-tag i {
+  font-size: 2.5em; 
+  color: #FFFFFF; 
+}
+
+#titleSpan{
+  color:#f0faff;
+  font-weight: 700;
+  font-family:'Orbitron', sans-serif;
+
 }
 
 #subtitulo {
   font-size: 1.2rem;
-  color: #555;
-}
+  color: #f0faff;
 
-#home {
-  background-color: #fff;
-  padding: 80px 50px;
-  text-align: center;
-}
-
-.home-container h2 {
-  font-size: 2.5rem;
-  color: #f5e1d7;
-}
-
-.home-container p {
-  font-size: 1.1rem;
-  color: #555;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 #profile {
   display: flex;
   justify-content: center;
   padding: 50px;
-  background-color: #fff;
+  background: linear-gradient(135deg, #0f0f1a, #1b1b2f);
+
 }
 
 .profile-container {
@@ -108,11 +194,17 @@ header {
   margin-top: 80px;
   width: 100%;
   padding: 50px 0;
-  background-color: #f7f7f7;
+}
+
+.glass-card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
 }
 
 .experience-container {
-  background-color: #fff;
+  background-color: linear-gradient(135deg, #0f0f1a, #1b1b2f);
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -224,7 +316,6 @@ header {
 
 /* Footer */
 footer {
-  background-color: #f5e1d7;
   padding: 20px 0;
   text-align: center;
   color: #333;

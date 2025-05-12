@@ -4,27 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Andrea Stefanny Garcia Mejia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header>
     <div class="header-container">
-      <img src="./images/profile.jpg" alt="Andrea Stefanny García" class="profile-img">
-      <div class="header-text">
-        <h1 id="nombre">Andrea Stefanny García Mejía</h1>
-        <p id="subtitulo">Software Developer</p>
+      <i class="fas fa-code icon-logo"></i>
+      <div class="custom-tag">
+        <span class="animated-title">&lt;Developer name="Andrea Stefanny García" /&gt;</span>
       </div>
     </div>
   </header>
-
-  <section id="home">
-    <div class="home-container">
-      <h2>Bienvenido a mi portafolio</h2>
-      <p>Este es un espacio donde podrás ver mis proyectos, experiencia y habilidades.</p>
-    </div>
-  </section>
-
   <section id="profile">
     <div class="profile-container">
       <div class="profile-img-container">
@@ -40,14 +33,13 @@
   </section>
 
   <section id="experience">
-    <div class="experience-container fade-in">
+    <div class="experience-container fade-in glass-card">
       <h2>Experiencia Laboral</h2>
       <div class="experience-item">
         <h3>Wiedii S.A.S, San José de Cúcuta - Colombia</h3>
         <p><strong>Feb, 2024 - Ago, 2024 | Practicante</strong></p>
         <ul>
           <li>Desarrollé funcionalidades y solucioné errores en apps con <strong>Swift/React Native</strong>, contribuyendo al 15% de la mejora de la experiencia del usuario.</li>
-          <li>Colaboré en sprints Scrum, alcanzando un 20% de los objetivos del sprint.</li>
           <li>Apliqué principios de UX/UI en interfaces con <strong>HTML, CSS, JavaScript y React</strong>, mejorando la experiencia del usuario en un 10% de las páginas.</li>
         </ul>
       </div>
@@ -55,15 +47,20 @@
       <p class="skills">Swift | SwiftUI | React | React Native | Java | Spring Boot | HTML | CSS | Node.js | MySQL | JavaScript</p>
     </div>
   </section>
+
   <div class="carousel-container">
-    <div id="github-projects" class="carousel">
-    </div>
+    <div id="github-projects" class="carousel"></div>
   </div>  
+
   <script src="./script.js"></script>
+
   <footer>
     <p>&copy; 2025 Andrea Stefanny García Mejía. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
+
+
+
 
 
