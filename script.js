@@ -1,8 +1,15 @@
 const githubUsername = "Andreastephgm";
 const projectsContainer = document.getElementById("github-projects");
+let scrollPosition = 0;
+const track = document.querySelector(".carousel-track");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 
-// Lista de proyectos con su imagen asociada
 const selectedProjects = [
+  {
+    name: 'todo-s',
+    image: './images/photo.jpg'
+  },
   {
     name: 'gameStream',
     image: "./images/game-stream.webp"
@@ -16,9 +23,14 @@ const selectedProjects = [
     image: './images/gps.jpg'
   },
   {
-    name: 'Contact-Cards',
-    image: './images/diadema.avif'
+    name: 'Animeflix',
+    image: './images/animeflix.webp'
+  },
+  {
+    name: 'gestion_academica',
+    image: './images/photo.jpg'
   }
+
 ];
 
 async function fetchGitHubRepo(repoName) {
@@ -30,6 +42,23 @@ async function fetchGitHubRepo(repoName) {
   return await response.json();
 }
 
+function scrollSlider(direction) {
+  const itemWidth = document.querySelector(".carousel-item").offsetWidth + 16; 
+  const visibleWidth = document.querySelector(".carousel-container").offsetWidth;
+  const totalWidth = track.scrollWidth;
+
+  if (direction === "next") {
+    scrollPosition = Math.min(scrollPosition + itemWidth, totalWidth - visibleWidth);
+  } else {
+    scrollPosition = Math.max(scrollPosition - itemWidth, 0);
+  }
+
+  track.style.transform = `translateX(-${scrollPosition}px)`;
+}
+
+prevBtn.addEventListener("click", () => scrollSlider("prev"));
+nextBtn.addEventListener("click", () => scrollSlider("next"));
+
 function createProjectCard(project, imageUrl) {
   const card = document.createElement("div");
   card.classList.add("carousel-item");
@@ -37,8 +66,8 @@ function createProjectCard(project, imageUrl) {
   card.innerHTML = `
     <img src="${imageUrl}" alt="${project.name}" class="project-image" />
     <h3>${project.name}</h3>
-    <p>${project.description || "Sin descripción disponible"}</p>
-    <a href="${project.html_url}" target="_blank">Ver en GitHub</a>
+    <a href="${project.html_url}" target="_blank">Ver en GitHub</a><br>
+    <a href="https://andreastephgm.github.io/${project.name}" target="_blank">Ver Proyecto</a>
   `;
 
   return card;
