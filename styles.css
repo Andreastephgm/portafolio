@@ -259,6 +259,17 @@ header {
       transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info {
+    padding-left: 0;
+  }
+}
 #projects {
   margin-top: 80px;
   padding: 50px 0;
@@ -282,6 +293,7 @@ header {
   width: 200px;
   height: 250px;
   border: 1px solid #ccc;
+  background-color: #555 ;
   border-radius: 10px;
   background: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
