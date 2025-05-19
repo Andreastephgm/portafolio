@@ -61,12 +61,39 @@
   
     <button id="nextBtn" class="carousel-btn">→</button>
   </div>
-   
-  <script src="./script.js"></script>
+  <div id="myModal" class="modal">
+    <div class="modalContent">
+      <span class="close">&times;</span>
+      <h2>Formulario de Contacto</h2>
+      <form action="https://formspree.io/f/mvgayojg"
+        method="POST" id="contactForm"> 
+        <label for="nombre" id="nameForm">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="mensaje" id="messageForm">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+      <button type="submit" id="submitButton">Enviar</button>
+      </form>
+    </div>
+  </div>
 
   <footer>
+    <div class="link">
+      <a href="https://www.linkedin.com/in/andreastefannydev/" class="linkedin-link">
+        <img src="./images/linkedInGreen.png" alt="LinkedIn" />
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://github.com/Andreastephgm" class="linkedin-link">
+        <img src="./images/gitHub.png" alt="GitHub" />
+        <span>GitHub</span>
+      </a>
+      <a href="#" class="linkedin-link" id="openModal">
+        <img src="./images/outlook.png" alt="Outlook" />
+        <span>Contactame por Outlook</span>
+      </a>
+    </div>
     <p>&copy; 2025 Andrea Stefanny García Mejía. Todos los derechos reservados.</p>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>
 

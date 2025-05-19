@@ -4,8 +4,61 @@ let scrollPosition = 0;
 const track = document.querySelector(".carousel-track");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
+const modal = document.getElementById("myModal");
+const openModal = document.getElementById("openModal");
+const closeModal = document.querySelector(".close");
+const sendButton = document.getElementById("submitButton");
+const nameForm = document.getElementById("nameForm");
+const messageForm = document.getElementById("messageForm");
+const contactForm = document.getElementById("contactForm");
+
+openModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.style.display = "block";
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault(); 
+
+  const formData = new FormData(contactForm);
+
+  try {
+    const response = await fetch("https://formspree.io/f/mvgayojg", {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      contactForm.reset(); 
+      alert("Formulario recibido. Gracias por tu mensaje.");
+      modal.style.display = "none";
+    } else {
+      alert("Ocurrió un error al enviar el mensaje. Intenta de nuevo.");
+    }
+  } catch (error) {
+    alert("Error al conectar con el servidor.");
+  }
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 
 const selectedProjects = [
+  {
+    name: 'temperature-conversor',
+    image: './images/temperatureConverter.png'
+  },
   {
     name: 'todo-s',
     image: './images/photo.jpg'
@@ -84,11 +137,3 @@ async function loadProjects() {
 }
 
 loadProjects();
-
-
-
-
-
-
-
-
