@@ -60,7 +60,7 @@ const selectedProjects = [
     image: './images/temperatureConverter.png'
   },
   {
-    name: 'todo-s',
+    name: 'toDOApp',
     image: './images/photo.jpg'
   },
   {
